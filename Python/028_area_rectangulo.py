@@ -4,10 +4,11 @@ radio = input('Ingresa radio:')
 alturaCilindro = input('Ingresa altura del cilindro:') 
 
 try:
-    # base = float(base)
-    # altura = float(altura)
     alturaCilindro = float(alturaCilindro)
     radio = float(radio)
+    
+    # base = float(base)
+    # altura = float(altura)
     # def areaRectangulos(base, altura):
     #     return (base * altura)
     
