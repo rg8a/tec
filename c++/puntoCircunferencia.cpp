@@ -7,9 +7,9 @@ using namespace std;
 char imprimir_resultado(float &radio, float &resultado){
     //Salida
     if (radio > resultado){
-        cout << "FUERA" << "\n";
+        cout << "DENTRO" << "\n";
     } else {
-        if (radio > resultado){
+        if (radio < resultado){
             cout << "FUERA" << "\n";
         } else{
             cout << "SOBRE" << "\n";
