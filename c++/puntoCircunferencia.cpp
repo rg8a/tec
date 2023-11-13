@@ -1,10 +1,10 @@
 // Ricardo Gaspar Ochoa - A00838841
-// Este programa trabaja con la formula general
+// Este busca posición de un punto con respecto a la circunferencia
 #include <iostream>
 #include <cmath>
 using namespace std;
 
-char imprimir_resultado(float &radio, float &resultado){
+void imprimir_resultado(float &radio, float &resultado){
     //Salida
     if (radio > resultado){
         cout << "DENTRO" << "\n";
@@ -36,16 +36,16 @@ void captura_radio(float &radio){
 
 void datos_coordenadas(float &coordenada_x1, float &coordenada_y1,float &coordenada_x2, float &coordenada_y2){
     //Entrada
-    cout << "Intorduce el valor de x1:";
+    cout << "Intorduce el valor de x del centro de la circunferencia:";
     cin >> coordenada_x1;
 
-    cout << "Intorduce el valor de y1:";
+    cout << "Intorduce el valor de y del centro de la circunferencia:";
     cin >> coordenada_y1;
     
-    cout << "Intorduce el valor de x2:";
+    cout << "Intorduce el valor de x del punto:";
     cin >> coordenada_x2;
     
-    cout << "Intorduce el valor de y2:";
+    cout << "Intorduce el valor de y del punto:";
     cin >> coordenada_y2;
 }
 
