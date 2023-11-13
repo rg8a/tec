@@ -11,8 +11,10 @@ int main() {
     float resultado;
     
     // Entradas
-    ejemplo.setLargo(10);
-    ejemplo.setAncho(5);
+    // ejemplo.setLargo();
+    // ejemplo.setAncho();
+    ejemplo.capturaDatos();
+    
     // Procesos
     resultado = ejemplo.calculaArea();
 

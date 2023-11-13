@@ -10,6 +10,9 @@ class Rectangulo {
         void setLargo(float miLargo);
         void setAncho(float miAncho);
         void muestraArea();
+        void capturaDatos();
+        float getLargo();
+        float getAncho();
 };
 
 float Rectangulo :: calculaArea() {
@@ -25,6 +28,22 @@ void Rectangulo :: setLargo(float miLargo){
 void Rectangulo :: setAncho(float miAncho){
     ancho = miAncho;
 }
-void Rectangulo :: muestraArea(){
-    cout << "el áreas es:" << calculaArea();
+
+void Rectangulo :: capturaDatos() {
+    cout << "Dame el largo del rectangulo:";
+    cin >> largo;
+    cout << "Dame el ancho del rectangulo:";
+    cin >> ancho;
+}
+
+void Rectangulo :: muestraArea() {
+    cout << "el area de largo=" << largo << " y ancho=" << ancho << " es " << calculaArea();    
+}
+
+float Rectangulo :: getLargo() {
+    return largo;
+}
+
+float Rectangulo :: getAncho() {
+    return ancho;    
 }
