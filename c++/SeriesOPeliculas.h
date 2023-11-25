@@ -1,5 +1,7 @@
+// Ricardo Gaspar Ochoa - A00838841
+// Este programa recibe datos de series y muestra el listado ingresado
+
 #include <iostream>
-#include <string.h>
 using namespace std;
 
 class SeriesOPelicula {
@@ -8,6 +10,8 @@ class SeriesOPelicula {
         char genero[50];
         int temporadas;
         int capitulos;
+        int ano;
+        char clasificacion[20];
 
     public:
         void setnombreDeSerie(char*);
@@ -21,6 +25,12 @@ class SeriesOPelicula {
 
         void setCapitulos(int);
         int getCapitulos();
+
+        void setAno(int);
+        int getAno();
+        
+        void setClasificacion(char*);
+        char* getClasificacion();
 
         void capturaDatos();
         void mostrarInfo();
@@ -58,12 +68,32 @@ int SeriesOPelicula :: getCapitulos(){
     return capitulos;
 }
 
+// Dato de Año
+void SeriesOPelicula :: setAno(int number) {
+    ano = number;
+}
+int SeriesOPelicula :: getAno(){
+    return ano;
+}
+
+// Dato de Clasificación
+void SeriesOPelicula :: setClasificacion(char* name) {
+    strcpy(clasificacion, name);
+}
+char* SeriesOPelicula :: getClasificacion(){
+    return clasificacion;
+}
+
 // Captura de datos
 void SeriesOPelicula :: capturaDatos() {
     cin.getline(nombreDeSerie,50,'\n');
     cin.getline(genero,50,'\n');
     cin >> temporadas;
     cin >> capitulos;
+    cin >> ano;
+    cin.ignore();
+    cin.getline(clasificacion,20,'\n');;
+
 }
 
 void SeriesOPelicula :: mostrarInfo() {
@@ -72,5 +102,7 @@ void SeriesOPelicula :: mostrarInfo() {
     cout << "Género: " << genero << "\n";
     cout << "Temporadas: " << temporadas << "\n";
     cout << "Capítulos: " << capitulos << "\n";
+    cout << "Año: " << ano << "\n";
+    cout << "Clasificación: " << clasificacion << "\n";
     cout << "\n";
 }

@@ -1,5 +1,7 @@
+// Ricardo Gaspar Ochoa - A00838841
+// Este programa recibe datos de series y muestra el listado ingresado
+
 #include <iostream>
-#include <string.h>
 #include "SeriesOPeliculas.h"
 using namespace std;
 
@@ -43,5 +45,4 @@ void Serie :: mostrarSerieResume() {
 void Serie :: mostrarDatos() {
     mostrarSerieResume();
     mostrarInfoDeSeriePelicula();
-
 }
