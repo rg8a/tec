@@ -2,22 +2,31 @@
 // Este programa recibe datos de series y muestra el listado ingresado
 
 #include <iostream>
-#include "SeriesOPeliculas.h"
+#include "SeriesOPelicula.h"
 using namespace std;
 
 class Serie {
     private:
         char nombreDeLista[50];
         SeriesOPelicula seriePelicula;
+        // char NombreDeSerieDesdeSeriesOPelicula[50];
 
     public:
+        Serie();
         void setNombreDeLista(char*);
         char* getNombreDeLista();
+        // void setNombreDeSerieDesdeSeriesOPelicula(char*);
+        char* getNombreDeSerieDesdeSeriesOPelicula(); 
         void capturaDatos();
         void mostrarDatos();
         void mostrarSerieResume();
         void mostrarInfoDeSeriePelicula();
 };
+
+Serie :: Serie() {
+    // Inicializo
+    nombreDeLista[0] = '\0';
+}
 
 void Serie :: setNombreDeLista(char* name) {
     strcpy(nombreDeLista, name);
@@ -36,6 +45,14 @@ void Serie::mostrarInfoDeSeriePelicula() {
     seriePelicula.mostrarInfo();
 }
 
+// void Serie :: setNombreDeSerieDesdeSeriesOPelicula(char* name) {
+//     strcpy(NombreDeSerieDesdeSeriesOPelicula, name);
+// }
+
+char* Serie::getNombreDeSerieDesdeSeriesOPelicula() {
+    return seriePelicula.getnombreDeSerie();
+}
+
 void Serie :: mostrarSerieResume() {
     cout << "\n";
     cout << "- Lista creada -" << "\n";
@@ -43,6 +60,6 @@ void Serie :: mostrarSerieResume() {
     cout << "\n";
 }
 void Serie :: mostrarDatos() {
-    mostrarSerieResume();
+    cout << "- Lista consulta -" << "\n";
     mostrarInfoDeSeriePelicula();
 }

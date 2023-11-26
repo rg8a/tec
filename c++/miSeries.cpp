@@ -7,13 +7,38 @@ using namespace std;
 
 int main() {
     //Variables
-    Serie miSerie;
-    
+    // Serie miSerie;
+    vector<Serie> series; 
+
     //Entradas
-    miSerie.capturaDatos();
+    // miSerie.capturaDatos();
+
+    // nuevaSerie.capturaDeTituloLista();
+
+    while (true) {
+        Serie nuevaSerie;
+
+        nuevaSerie.capturaDatos();
+
+        // Verificar si el nombre de la serie es vacío, si lo es, detener la entrada
+        if (nuevaSerie.getNombreDeSerieDesdeSeriesOPelicula()[0] == '\0') {
+            break;
+        }
+
+        series.push_back(nuevaSerie);  // Agregar la serie al vector
+    }
+    
+    series[0].mostrarSerieResume();
+    for ( Serie& serie : series) {
+        serie.mostrarDatos();
+    }
+
+    // Nota  cuando 'miSerie.getNombreDeSerieDesdeSeriesOPelicula()'
+    // sea == '\0', se para de agregar datos
 
     // Salida
-    miSerie.mostrarDatos();
+    // cout << miSerie.getNombreDeSerieDesdeSeriesOPelicula();
+
 
     return 0;
 }
