@@ -1,0 +1,21 @@
+{
+    "configurations": [
+        {
+            "name": "Mac",
+            "includePath": [
+                "${workspaceFolder}/**"
+            ],
+            "defines": [],
+            "macFrameworkPath": [],
+            "cppStandard": "c++23",
+            "browse": {
+                "path": [
+                    "*"
+                ]
+            },
+            "mergeConfigurations": false,
+            "compilerPath": "/ochoagram/bin"
+        }
+    ],
+    "version": 4
+}
