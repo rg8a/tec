@@ -1,0 +1,68 @@
+## Orden de Eficiencia de un Algoritmo
+
+El **orden de eficiencia** de un algoritmo, también conocido como **complejidad temporal** o **complejidad computacional**, describe cómo el tiempo de ejecución de un algoritmo crece a medida que aumenta el tamaño de la entrada. Esto es crucial para entender el rendimiento de un algoritmo, especialmente cuando se trabaja con grandes volúmenes de datos.
+
+### Notación Big-O
+
+La notación **Big-O** (O grande) es la forma más común de expresar la eficiencia de un algoritmo. Esta notación proporciona una cota superior sobre el tiempo de ejecución en función del tamaño de la entrada (generalmente denotado como `n`). La notación Big-O describe el peor caso del rendimiento del algoritmo.
+
+### Ejemplos Comunes de Complejidad
+
+1. **O(1)** - **Tiempo constante**:
+
+   - El tiempo de ejecución no depende del tamaño de la entrada.
+   - Ejemplo: Acceso a un elemento en un array por su índice.
+   - Independientemente de cuántos elementos haya, el tiempo de ejecución es el mismo.
+
+2. **O(log n)** - **Tiempo logarítmico**:
+
+   - El tiempo de ejecución crece logarítmicamente a medida que el tamaño de la entrada aumenta.
+   - Ejemplo: Búsqueda binaria.
+   - A medida que `n` crece, el tiempo de ejecución crece mucho más lentamente.
+
+3. **O(n)** - **Tiempo lineal**:
+
+   - El tiempo de ejecución crece linealmente con el tamaño de la entrada.
+   - Ejemplo: Recorrido de un array de `n` elementos.
+   - Si el tamaño de la entrada se duplica, el tiempo de ejecución también se duplica.
+
+4. **O(n log n)** - **Tiempo logarítmico lineal**:
+
+   - Común en algoritmos de ordenamiento eficientes como mergesort y heapsort.
+   - Crece más rápido que O(n), pero es más eficiente que O(n^2).
+
+5. **O(n^2)** - **Tiempo cuadrático**:
+
+   - El tiempo de ejecución crece cuadráticamente con el tamaño de la entrada.
+   - Ejemplo: Algoritmos de ordenamiento burbuja, inserción, o selección.
+   - Si el tamaño de la entrada se duplica, el tiempo de ejecución se cuadruplica.
+
+6. **O(2^n)** - **Tiempo exponencial**:
+
+   - El tiempo de ejecución crece exponencialmente con el tamaño de la entrada.
+   - Ejemplo: Algoritmos de fuerza bruta para resolver el problema del viajante (TSP).
+   - Muy ineficiente, y generalmente no es práctico para grandes entradas.
+
+7. **O(n!)** - **Tiempo factorial**:
+   - El tiempo de ejecución crece factorialmente con el tamaño de la entrada.
+   - Ejemplo: Algoritmo para encontrar todas las permutaciones posibles de un conjunto.
+   - Es la más ineficiente, utilizada solo en contextos muy específicos.
+
+### Por qué es importante
+
+Entender la eficiencia de un algoritmo es crucial porque determina si el algoritmo es práctico para grandes conjuntos de datos. Un algoritmo con una complejidad baja (por ejemplo, O(n) o O(log n)) es generalmente más deseable que uno con alta complejidad (por ejemplo, O(n^2) o O(2^n)), especialmente a medida que el tamaño de la entrada crece.
+
+Por ejemplo, si un algoritmo tiene una complejidad O(n^2) y el tamaño de la entrada aumenta de 10 a 100, el tiempo de ejecución se multiplicará por 100 (10^2). Sin embargo, si la complejidad es O(n log n), el tiempo de ejecución crecerá mucho más lentamente.
+
+### Resumen
+
+- **O(1)**: Tiempo constante, muy eficiente.
+- **O(log n)**: Tiempo logarítmico, eficiente para grandes entradas.
+- **O(n)**: Tiempo lineal, razonablemente eficiente.
+- **O(n log n)**: Eficiencia de algoritmos de ordenación eficientes.
+- **O(n^2)**: Tiempo cuadrático, menos eficiente.
+- **O(2^n)** y **O(n!)**: Exponencial y factorial, ineficientes y a menudo imprácticos para grandes entradas.
+
+En resumen, al analizar la eficiencia de un algoritmo, la notación Big-O te permite evaluar cómo se comporta el algoritmo a medida que aumenta el tamaño de la entrada, lo cual es esencial para el diseño de soluciones escalables y eficientes.
+
+---

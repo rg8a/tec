@@ -1,83 +1,78 @@
 // Ricardo Gaspar Ochoa - A00838841
+// Este programa es la actividad 1.1 la cual crea funciones iterativas, recursivas y su análisis de complejidad.
+
 #include <iostream>
 
-/**
- * @brief Calcular la suma de 1 a n de forma iterativa.
- * 
- * @param n Un entero positivo.
- * @return La suma de 1 a n.
- * 
- * @note Complejidad: O(n)
- */
-int sumatorioIterativo(int n) {
+// Calculando la suma de 1 a n de forma iterativa.
+//  Complejidad: lineal  O(n)
+int sumaIterativa(int number)
+{
     int suma = 0;
-    for (int i = 1; i <= n; ++i) {
+    for (int i = 1; i <= number; ++i)
+    {
         suma += i;
     }
     return suma;
 }
 
-/**
- * @brief Calcular la suma de 1 a n de forma recursiva.
- * 
- * @param n Un entero positivo.
- * @return La suma de 1 a n.
- * 
- * @note Complejidad: O(n) (profundidad de la recursión)
- */
-int sumaRecursiva(int n) {
-    if (n == 1) {
+// Calculando la suma de 1 a n de forma recursiva.
+// Complejidad: lineal  O(n)
+int sumaRecursiva(int number)
+{
+    if (number == 1)
+    {
         return 1;
-    } else {
-        return n + sumaRecursiva(n - 1);
+    }
+    else
+    {
+        return number + sumaRecursiva(number - 1);
     }
 }
 
-/**
- * @brief Calcular la suma de 1 a n de forma directa usando la fórmula matemática.
- * 
- * @param n Un entero positivo.
- * @return La suma de 1 a n.
- * 
- * @note Complejidad: O(1)
- */
-int sumaDirecta(int n) {
-    return n * (n + 1) / 2;
+// Calcular la suma de 1 a n de forma directa usando la fórmula matemática.
+//  Complejidad: constante  O(1)
+int sumaDirecta(int number)
+{
+    return number * (number + 1) / 2;
 }
 
-/**
- * @brief Calcular el número de iteraciones necesarias para llegar a 1 con el método 3n + 1.
- * 
- * @param n Un entero positivo.
- * @return La cantidad de pasos necesarios para finalizar en 1.
- * 
- * @note Complejidad: No se requiere cálculo de complejidad.
- */
-int O3nPlusOne(int n) {
-    if (n == 1) {
+// Calculando el número de iteraciones necesarias para llegar a 1 con el método 3n + 1.
+// Complejidad:  O(log n)
+int O3nPlusOne(int number)
+{
+    if (number == 1)
+    {
         return 0;
-    } else if (n % 2 == 0) {
-        return 1 + O3nPlusOne(n / 2);
-    } else {
-        return 1 + O3nPlusOne(3 * n + 1);
+    }
+    else if (number % 2 == 0)
+    {
+        return 1 + O3nPlusOne(number / 2);
+    }
+    else
+    {
+        return 1 + O3nPlusOne(3 * number + 1);
     }
 }
 
-int main() {
-    int n;
+int main()
+{
+    // Declaración de la variable
+    int number;
 
-    std::cout << "Ingrese un número entero positivo: ";
-    std::cin >> n;
+    std::cout << "Ingresa un número entero positivo: ";
+    std::cin >> number;
 
-    if (n <= 0) {
+    // Manejo de error con la varible number
+    if (number <= 0)
+    {
         std::cout << "El número debe ser un entero positivo." << std::endl;
         return 1;
     }
-
-    std::cout << "Suma iterativa: " << sumatorioIterativo(n) << std::endl;
-    std::cout << "Suma recursiva: " << sumaRecursiva(n) << std::endl;
-    std::cout << "Suma directa: " << sumaDirecta(n) << std::endl;
-    std::cout << "Número de pasos para llegar a 1 con el método 3n + 1: " << O3nPlusOne(n) << std::endl;
+    // Salidas
+    std::cout << "Suma iterativa: " << sumaIterativa(number) << std::endl;
+    std::cout << "Suma recursiva: " << sumaRecursiva(number) << std::endl;
+    std::cout << "Suma directa: " << sumaDirecta(number) << std::endl;
+    std::cout << "Número de pasos para llegar a 1 con el método 3n + 1: " << O3nPlusOne(number) << std::endl;
 
     return 0;
 }

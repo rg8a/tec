@@ -1,0 +1,112 @@
+Lista completa de algunos algoritmos de ordenamiento populares, junto con su complejidad en el peor caso, caso promedio y mejor caso:
+
+---
+
+### Algoritmos de Ordenamiento y sus Complejidades
+
+| **Algoritmo de Ordenamiento**           | **Peor Caso**                                                                 | **Caso Promedio**                                                                    | **Mejor Caso**                                  |
+| --------------------------------------- | ----------------------------------------------------------------------------- | ------------------------------------------------------------------------------------ | ----------------------------------------------- |
+| **Heap Sort**                           | \( O(n \log n) \)                                                             | \( O(n \log n) \)                                                                    | \( O(n \log n) \)                               |
+| **Bubble Sort**                         | \( O(n^2) \)                                                                  | \( O(n^2) \)                                                                         | \( O(n) \) (Cuando el arreglo ya está ordenado) |
+| **Selection Sort**                      | \( O(n^2) \)                                                                  | \( O(n^2) \)                                                                         | \( O(n^2) \)                                    |
+| **Insertion Sort**                      | \( O(n^2) \)                                                                  | \( O(n^2) \)                                                                         | \( O(n) \) (Cuando el arreglo ya está ordenado) |
+| **Shell Sort**                          | \( O(n \log^2 n) \)                                                           | \( O(n \log n) \) o \( O(n \log^2 n) \) (dependiendo de la secuencia de incrementos) | \( O(n \log n) \)                               |
+| **Counting Sort**                       | \( O(n + k) \) (donde \( k \) es el rango de los valores)                     | \( O(n + k) \)                                                                       | \( O(n + k) \)                                  |
+| **Radix Sort**                          | \( O(nk) \) (donde \( k \) es el número de dígitos/posiciones en los números) | \( O(nk) \)                                                                          | \( O(nk) \)                                     |
+| **Bucket Sort**                         | \( O(n^2) \)                                                                  | \( O(n + k) \) (donde \( k \) es el número de cubetas)                               | \( O(n + k) \)                                  |
+| **Tim Sort** _(usado en Python y Java)_ | \( O(n \log n) \)                                                             | \( O(n \log n) \)                                                                    | \( O(n) \)                                      |
+| **Merge Sort**                          | \( O(n \log n) \)                                                             | \( O(n \log n) \)                                                                    | \( O(n \log n) \)                               |
+| **Quick Sort**                          | \( O(n^2) \)                                                                  | \( O(n \log n) \)                                                                    | \( O(n \log n) \)                               |
+| **Intercambio** _(Swap Sort)_           | \( O(n^2) \)                                                                  | \( O(n^2) \)                                                                         | \( O(n^2) \)                                    |
+
+---
+
+### Descripción de los Algoritmos
+
+#### 1. **Heap Sort**
+
+- **Descripción**: Utiliza una estructura de datos llamada heap (montículo) para ordenar los elementos. Primero construye un heap máximo y luego extrae el elemento máximo repetidamente para ordenar el arreglo.
+- **Características**:
+  - **Estable**: No, Heap Sort no es un algoritmo estable.
+  - **In-place**: Sí, requiere espacio adicional constante.
+
+#### 2. **Bubble Sort**
+
+- **Descripción**: Repite iterativamente el paso de comparar elementos adyacentes y los intercambia si están en el orden incorrecto. Este proceso se repite hasta que no se requieren más intercambios.
+- **Características**:
+  - **Estable**: Sí.
+  - **In-place**: Sí.
+
+#### 3. **Selection Sort**
+
+- **Descripción**: Divide el arreglo en una parte ordenada y otra no ordenada. Repeatedly selecciona el elemento mínimo de la parte no ordenada y lo intercambia con el primer elemento de dicha parte.
+- **Características**:
+  - **Estable**: No.
+  - **In-place**: Sí.
+
+#### 4. **Insertion Sort**
+
+- **Descripción**: Construye el arreglo ordenado uno a uno, tomando cada elemento de la parte no ordenada y colocándolo en la posición correcta dentro de la parte ordenada.
+- **Características**:
+  - **Estable**: Sí.
+  - **In-place**: Sí.
+
+#### 5. **Shell Sort**
+
+- **Descripción**: Una generalización de Insertion Sort que permite el intercambio de elementos que están lejos entre sí. Utiliza una secuencia de incrementos para ordenar elementos a distancias específicas y reduce gradualmente estas distancias.
+- **Características**:
+  - **Estable**: No.
+  - **In-place**: Sí.
+
+#### 6. **Counting Sort**
+
+- **Descripción**: Es un algoritmo de ordenamiento no comparativo que cuenta el número de ocurrencias de cada valor único y luego calcula las posiciones de cada elemento en el arreglo ordenado.
+- **Características**:
+  - **Estable**: Sí.
+  - **No es in-place**: Requiere espacio adicional proporcional al rango de los valores.
+
+#### 7. **Radix Sort**
+
+- **Descripción**: Ordena los números procesando dígito por dígito, comenzando por el dígito menos significativo hasta el más significativo. Utiliza un algoritmo de ordenamiento estable como Counting Sort en cada paso.
+- **Características**:
+  - **Estable**: Sí.
+  - **No es in-place**: Requiere espacio adicional.
+
+#### 8. **Bucket Sort**
+
+- **Descripción**: Distribuye los elementos en cubetas (buckets) y luego ordena cada cubeta individualmente, ya sea usando otro algoritmo de ordenamiento o recursivamente aplicando Bucket Sort.
+- **Características**:
+  - **Estable**: Depende del algoritmo utilizado para ordenar las cubetas.
+  - **No es in-place**: Requiere espacio adicional para las cubetas.
+
+#### 9. **Tim Sort**
+
+- **Descripción**: Una combinación de Merge Sort e Insertion Sort, optimizada para datos reales y utilizada en lenguajes de programación como Python y Java. Detecta subsecuencias ya ordenadas y las utiliza para optimizar el proceso de ordenamiento.
+- **Características**:
+  - **Estable**: Sí.
+  - **No es in-place**: Requiere espacio adicional para la fusión.
+
+#### 10. **Merge Sort**
+
+- **Descripción**: Divide el arreglo en mitades, ordena cada mitad recursivamente y luego las fusiona para obtener el arreglo final ordenado.
+- **Características**:
+  - **Estable**: Sí.
+  - **No es in-place**: Requiere espacio adicional para las sublistas.
+
+#### 11. **Quick Sort**
+
+- **Descripción**: Selecciona un pivote y particiona el arreglo en dos sub-arreglos, uno con elementos menores al pivote y otro con elementos mayores, luego aplica recursivamente el mismo proceso a los sub-arreglos.
+- **Características**:
+  - **Estable**: No.
+  - **In-place**: Sí.
+
+#### 12. **Intercambio** _(Swap Sort)_
+
+- **Descripción**: Un enfoque simple donde cada elemento es comparado e intercambiado con otros elementos hasta que todo el arreglo esté ordenado.
+- **Características**:
+  - **Estable**: No.
+  - **In-place**: Sí.
+
+---
+
+Esta lista incluye una variedad de algoritmos de ordenamiento, cada uno con su propia utilidad y características específicas, dependiendo del problema que se esté resolviendo y las restricciones de tiempo y espacio disponibles.
